@@ -5,14 +5,14 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "http://localhost:8000" || "https://wordleappclone.onrender.com",
-      "https://sablijr.github.io/WordleClone/",
-    ],
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "http://localhost:8000" || "https://wordleappclone.onrender.com",
+//       "https://sablijr.github.io/WordleClone/",
+//     ],
+//   })
+// );
 
 app.get("/word", (req, resp) => {
   const options = {
