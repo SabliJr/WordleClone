@@ -7,7 +7,10 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:8000" || "https://wordleappclone.onrender.com"],
+    origin: [
+      "http://localhost:8000" || "https://wordleappclone.onrender.com",
+      "https://sablijr.github.io/WordleClone/",
+    ],
   })
 );
 
