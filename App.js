@@ -6,7 +6,7 @@ let wordle;
 
 //Fetching the word
 const getWordle = () => {
-  fetch("https://wordleappclone.onrender.com/word")
+  fetch("http://localhost:8000/word")
     .then((response) => response.json())
     .then((json) => {
       // console.log(json);
@@ -135,7 +135,7 @@ const checkRow = () => {
   const guess = guessRows[currentRow].join("");
 
   if (currentTile > 4) {
-    fetch(`https://wordleappclone.onrender.com/check/?word=${guess}`)
+    fetch(`http://localhost:8000/check/?word=${guess}`)
       .then((response) => response.json())
       .then((json) => {
         if (json === false) {
