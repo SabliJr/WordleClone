@@ -7,9 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: [
-      "http://localhost:8000" || "https://sablijr.github.io/WordleClone/",
-    ],
+    origin: "https://sablijr.github.io",
   })
 );
 
