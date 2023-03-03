@@ -6,14 +6,14 @@ let wordle;
 
 //Fetching the word
 const getWordle = () => {
-  fetch("http://localhost:8000/word")
+  fetch("https://wordleappclone.onrender.com/word")
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
+      // console.log(json);
       wordle = json.toUpperCase();
     })
     .catch((err) => {
-      console.log(err);
+      console.error(err);
     });
 };
 
@@ -135,7 +135,7 @@ const checkRow = () => {
   const guess = guessRows[currentRow].join("");
 
   if (currentTile > 4) {
-    fetch(`http://localhost:8000/check/?word=${guess}`)
+    fetch(`https://wordleappclone.onrender.com/check/?word=${guess}`)
       .then((response) => response.json())
       .then((json) => {
         if (json === false) {
@@ -163,7 +163,7 @@ const checkRow = () => {
         }
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   }
 };
